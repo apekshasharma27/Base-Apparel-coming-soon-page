@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   font-family: 'Josefin Sans', sans-serif;
   font-size: 1rem;
@@ -5,16 +11,28 @@ body {
 
 .attribution {
   font-size: 11px;
+  position: absolute;
+  bottom: 0px;
+  left:0px;
 }
 
 .attribution a {
   color: hsl(0, 93%, 68%)
 }
 
-.main-area {
+.container {
   background-image: url("images/bg-pattern-desktop.svg");
   background-repeat: no-repeat;
   background-size: cover;
+  height: 100vh;
+}
+
+
+
+.header-logo {
+  padding-left: 8.5%;
+  padding-top: 2%;
+  padding-bottom: 5%;
 }
 
 .left-area {
@@ -33,7 +51,7 @@ body {
   font-size: 3.5rem;
   font-weight: 400;
   letter-spacing: 12px;
-  line-height: 1.6;
+  padding-bottom: 2%;
 }
 
 .display-text {
@@ -41,27 +59,28 @@ body {
   color: hsl(0, 36%, 70%);
   font-size: 1rem;
   line-height: 1.7rem;
-  width: 90%;
+  width: 70%;
+  padding-bottom: 5%;
 }
 
 .right-area {
   background-image: url("images/hero-desktop.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: top;
   float: right;
   width: 40%;
   height: 100vh;
-}
-
-.right-area img {
-  width: 50%;
+  position: absolute;
+  top: 0px;
+  right: 0px;
 }
 
 .clear {
   clear: both;
 }
 
-.input-item {
+#input-item {
   border-radius: 28px;
   border: 2px solid hsl(0, 6%, 24%, 0.3);
   padding: 1rem 1rem;
@@ -77,12 +96,63 @@ body {
   border-radius: 28px;
   cursor: pointer;
   position: absolute;
-  left: 600px;
+  left: 550px;
 }
 
-.invalid-Feedback {
+#invalid-feedback {
   width: 100%;
   margin-top: .25rem;
   font-size: 80%;
   color: #dc3545;
+}
+
+/*Media Queries*/
+@media(max-width : 480px) {
+  .container {
+    width: 100%;
+  }
+
+  .header {
+    padding-bottom: 5%;
+  }
+
+  .header-logo {
+    padding: 5%;
+  }
+
+  .left-area {
+    text-align: center;
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 10%;
+  }
+
+  .right-area {
+    width: 100%;
+    background: url("images/hero-mobile.jpg");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: contain;
+    position: static;
+    height:300px;
+  }
+
+  .left-right {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .display-text {
+    width: 100%;
+  }
+
+  .attribution {
+    position: static;
+  }
+
+  .header-input-button {
+    position: absolute;
+    left: 340px;
+  }
 }

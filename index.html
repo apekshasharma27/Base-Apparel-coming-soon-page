@@ -15,43 +15,48 @@
 
 <body>
   <div class="container">
-    <div class="main-area">
-
-
-      <div class="left-area">
-        <img src="images/logo.svg" alt=""><br /><br /><br />
-        <h1 class="header"><span class="sub-header">WE'RE <br /></span> COMING<br /> SOON</h1>
-        <p class="display-text">
-          Hello fellow shoppers! We're currently building our new fashion store.
-          Add your email below to stay up-to-date with announcements and our launch deals.
-        </p>
-        <form>
-          <input type="email" placeholder="Email Address" class="input-item"></input>
-          <button type="submit" class="header-input-button"><img src="images/icon-arrow.svg" alt="" class="arrow-image"/></button></button>
-        </form>
+    <div class="main">
+      <div class="header-logo">
+        <img src="images/logo.svg" alt="">
       </div>
-      <div class="right-area">
+      <div class="left-right">
+        <div class="left-area">
+          <h1 class="header"><span class="sub-header">WE'RE <br /></span> COMING<br /> SOON</h1>
+          <p class="display-text">
+            Hello fellow shoppers! We're currently building our new fashion store.
+            Add your email below to stay up-to-date with announcements and our launch deals.
+          </p>
+          <form id="email-form">
+            <input type="email" placeholder="Email Address" id="input-item"></input>
+            <button type="submit" class="header-input-button" onclick="validateEmail()"><img src="images/icon-arrow.svg" alt="" class="arrow-image" /></button></button>
+          </form>
+          <p id="invalid-feedback">
 
-      </div>
-      <div class="clear">
+          </p>
+        </div>
+        <div class="right-area">
 
+        </div>
       </div>
-      <div class="invalid-feedback">
-        
-      </div>
-      
+
     </div>
-	
-	<footer>
-        <p class="attribution">
-          Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-          Coded by <a href="#">Apeksha Sharma</a>.
-        </p>
-      </footer>
+    <div class="clear">
+
+    </div>
+
+
+    <footer>
+      <p class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+        Coded by <a href="#">Apeksha Sharma</a>.
+      </p>
+    </footer>
   </div>
 
 
+<script type="text/javascript" src="validation.js">
 
+</script>
 </body>
 
 </html>
